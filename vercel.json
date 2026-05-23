@@ -1,5 +1,19 @@
 {
   "rewrites": [
-    { "source": "/((?!api/).*)", "destination": "/" }
-  ]
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/"
+    }
+  ],
+  "experimentalServices": {
+    "frontend": {
+      "routePrefix": "/",
+      "framework": "vite"
+    },
+    "backend": {
+      "root": "backend",
+      "entrypoint": "index.js",
+      "routePrefix": "/_/backend"
+    }
+  }
 }
